@@ -1,0 +1,41 @@
+<div class="card border shadow mx-auto align-middle" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Create New Post</h5>
+      <h6 class="card-subtitle mb-2 text-muted">
+        <a href="#" routerLink="/post/index" class="btn btn-primary mr-auto"
+          >Back</a
+        >
+      </h6>
+      <form [formGroup]="form" >
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input
+            type="text"
+            class="form-control"
+            id="title"
+            placeholder="enter title"
+            formControlName="title"
+            [ngModel]="post?.title"
+            [readOnly]=true
+
+          />
+     
+        </div>
+        <div class="form-group">
+          <label for="body">Body</label>
+          <input
+            [ngModel]="post?.body"
+            formControlName="body"
+            type="text"
+            class="form-control"
+            id="body"
+            placeholder="enter body"
+            [readOnly]=true
+          />
+     
+        </div>
+    
+      </form>
+    </div>
+  </div>
+  

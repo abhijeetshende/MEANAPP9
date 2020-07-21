@@ -1,0 +1,43 @@
+<p>index-network works!</p>
+<div class="container-fluid border">
+    <div class="row">
+        <button (click)="create()" class="text-center btn btn-primary ml-auto mybtn border d-flex">Add network</button>
+    </div>
+</div>
+
+<!-- <div class="card border shadow" style="width: 18rem;" *ngFor="let network of networks">
+    <div class="card-body">
+      <h5 class="card-title">{{network.title}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{network.name}}</h6>
+      <p class="card-text">{{network.body}}.</p>
+      <p class="card-text">{{network.ipv4}}</p>
+      <p class="card-text">{{network.ipv6}}</p>
+      <p class="card-text">{{network.comments}}</p>
+      <button class="btn btn-danger" (click)="delete(network._id)">Delete</button>
+      <button class="btn btn-primary" [routerLink]="['/network/',network._id,'edit']">View</button>
+    </div>
+  </div> -->
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Title</th>
+        <th scope="col">Body</th>
+        <th scope="col">IPV4</th>
+        <th scope="col">IPV6</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let network of networks">
+        <th scope="row">1</th>
+        <td>{{network.name}}</td>
+        <td>{{network.title}}</td>
+        <td>{{network.body}}</td>
+        <td>{{network.ipv4}}</td>
+        <td>{{network.ipv6}}</td>
+      </tr>
+
+    </tbody>
+  </table>
+  
